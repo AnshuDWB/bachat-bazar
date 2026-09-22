@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:match*",
+      "destination": "https://bachat-bazar-backend-uebr.onrender.com/api/:match*"
+    }
+  ]
+}
