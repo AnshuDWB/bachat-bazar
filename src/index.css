@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F7F7F7] text-[#111111] font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[#111111] tracking-tight;
+  }
+}
+
+/* Custom Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F1F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CCCCCC;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D71920;
+}
+
+/* Subtle Pulsing / Glow */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glass & Clean Card styles */
+.bb-card {
+  @apply bg-white border border-[#EBEBEB] rounded-xl transition-all duration-200;
+}
+
+.bb-card-hover {
+  @apply hover:border-[#D71920]/40 hover:shadow-md;
+}
+
+/* Member Price Highlight styling */
+.member-tag {
+  @apply bg-[#FFF1F1] text-[#D71920] border border-[#FCA5A5] font-semibold text-xs px-2 py-0.5 rounded-md inline-flex items-center gap-1;
+}
+
+.member-badge-gold {
+  background: linear-gradient(135deg, #111111 0%, #2A2A2A 100%);
+  border: 1px solid #D71920;
+}
