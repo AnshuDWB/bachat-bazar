@@ -708,7 +708,8 @@ export default function AdminPortal() {
   };
 
   // Filtered Customers for Members Tab
-  const filteredCustomers = customers.filter(c => {
+  const filteredCustomers = (customers || []).filter(c => {
+    if (!c) return false;
     const matchQuery =
       c.name?.toLowerCase().includes(customerSearch.toLowerCase()) ||
       c.phone?.includes(customerSearch) ||
@@ -721,8 +722,9 @@ export default function AdminPortal() {
   });
 
   // Filtered Membership Applications for Queue Tab
-  const pendingMembershipRequestsCount = membershipRequests.filter(r => r.status === 'PENDING_APPROVAL').length;
-  const filteredMembershipRequests = membershipRequests.filter(req => {
+  const pendingMembershipRequestsCount = (membershipRequests || []).filter(r => r && r.status === 'PENDING_APPROVAL').length;
+  const filteredMembershipRequests = (membershipRequests || []).filter(req => {
+    if (!req) return false;
     const matchQuery =
       req.customerName?.toLowerCase().includes(membershipReqSearch.toLowerCase()) ||
       req.customerPhone?.includes(membershipReqSearch) ||
@@ -737,7 +739,8 @@ export default function AdminPortal() {
   });
 
   // Filtered Consents for Table
-  const filteredConsents = consentsList.filter(c => {
+  const filteredConsents = (consentsList || []).filter(c => {
+    if (!c) return false;
     const matchQuery =
       c.customerName?.toLowerCase().includes(consentSearch.toLowerCase()) ||
       c.phone?.includes(consentSearch);
