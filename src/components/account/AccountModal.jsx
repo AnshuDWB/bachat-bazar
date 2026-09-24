@@ -141,18 +141,18 @@ export default function AccountModal() {
         <div className="p-5 bg-[#111111] text-white flex items-center justify-between border-b border-neutral-800">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-[#D71920] rounded-xl flex items-center justify-center font-bold text-white text-lg">
-              {user.name.charAt(0).toUpperCase()}
+              {(user.name || user.phone || 'U').charAt(0).toUpperCase()}
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-base font-bold text-white">{user.name}</h2>
+                <h2 className="text-base font-bold text-white">{user.name || user.phone || 'Customer'}</h2>
                 {isMember && (
                   <span className="bg-[#FFF1F1] text-[#D71920] text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
                     ★ Member ({user.memberId})
                   </span>
                 )}
               </div>
-              <p className="text-xs text-neutral-400">{user.phone} • {user.email}</p>
+              <p className="text-xs text-neutral-400">{user.phone} • {user.email || 'No email'}</p>
             </div>
           </div>
 

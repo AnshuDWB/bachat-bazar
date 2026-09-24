@@ -73,21 +73,24 @@ export function CartProvider({ children }) {
   };
 
   // Pricing & Dual Price calculations
-  const totalItemCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const totalItemCount = cartItems.reduce((sum, item) => sum + (item.quantity || 1), 0);
 
   // Normal Total (Price for non-members)
   const normalSubtotal = cartItems.reduce((sum, item) => {
-    return sum + (item.product.normalPrice * item.quantity);
+    const p = item.product || {};
+    return sum + ((p.normalPrice || 0) * (item.quantity || 1));
   }, 0);
 
   // Member Total (Price for members)
   const memberSubtotal = cartItems.reduce((sum, item) => {
-    return sum + (item.product.memberPrice * item.quantity);
+    const p = item.product || {};
+    return sum + ((p.memberPrice || p.normalPrice || 0) * (item.quantity || 1));
   }, 0);
 
   // Total at MRP
   const mrpTotal = cartItems.reduce((sum, item) => {
-    return sum + (item.product.mrp * item.quantity);
+    const p = item.product || {};
+    return sum + ((p.mrp || p.normalPrice || 0) * (item.quantity || 1));
   }, 0);
 
   // Active Subtotal based on customer status

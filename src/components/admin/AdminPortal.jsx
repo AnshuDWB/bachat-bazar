@@ -48,8 +48,11 @@ import {
   Crown,
   Check,
   Award,
-  Banknote
+  Banknote,
+  TrendingUp,
+  BarChart2
 } from 'lucide-react';
+import SalesAnalytics from './SalesAnalytics';
 
 const presetHeroImages = [
   { label: 'Fresh Vegetables & Grocery Basket', url: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&auto=format&fit=crop&q=80' },
@@ -71,6 +74,7 @@ export default function AdminPortal() {
     addProduct,
     updateProduct,
     deleteProduct,
+    addCategory,
     addHeroSlide,
     updateHeroSlide,
     deleteHeroSlide,
@@ -80,7 +84,7 @@ export default function AdminPortal() {
     setCurrentView
   } = useStore();
 
-  const { user, isAdmin } = useAuth();
+  const { user, isAdmin, logout } = useAuth();
 
   const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard' | 'products' | 'orders' | 'customers' | 'memberships' | 'hero-slider' | 'whatsapp-compliance' | 'whatsapp-templates' | 'whatsapp-campaigns' | 'settings'
   const [stats, setStats] = useState(null);
@@ -155,6 +159,12 @@ export default function AdminPortal() {
     isFeatured: false,
     isDealOfDay: false
   });
+
+  // Dynamic Category Creation State in Product Modal
+  const [showAddCategoryInline, setShowAddCategoryInline] = useState(false);
+  const [newCatName, setNewCatName] = useState('');
+  const [newCatIcon, setNewCatIcon] = useState('📦');
+  const [isCreatingCategory, setIsCreatingCategory] = useState(false);
 
   // Hero Slider Form Modal State
   const [isHeroModalOpen, setIsHeroModalOpen] = useState(false);
@@ -232,10 +242,13 @@ export default function AdminPortal() {
   // Product Add / Edit Handlers
   const handleOpenAddProduct = () => {
     setEditingProduct(null);
+    setShowAddCategoryInline(false);
+    setNewCatName('');
+    setNewCatIcon('📦');
     setProductForm({
       name: '',
       brand: 'Bachat Bazar',
-      category: 'grocery',
+      category: categories.length > 0 ? categories[0].id : 'grocery',
       unit: '1 kg',
       mrp: '',
       normalPrice: '',
@@ -251,6 +264,9 @@ export default function AdminPortal() {
 
   const handleOpenEditProduct = (prod) => {
     setEditingProduct(prod);
+    setShowAddCategoryInline(false);
+    setNewCatName('');
+    setNewCatIcon('📦');
     setProductForm({
       name: prod.name,
       brand: prod.brand,
@@ -266,6 +282,30 @@ export default function AdminPortal() {
       isDealOfDay: Boolean(prod.isDealOfDay)
     });
     setIsProductModalOpen(true);
+  };
+
+  const handleCreateNewCategory = async (e) => {
+    if (e) e.preventDefault();
+    if (!newCatName.trim()) {
+      showToast('Please enter category name', 'warning');
+      return;
+    }
+    setIsCreatingCategory(true);
+    try {
+      const created = await addCategory({
+        name: newCatName.trim(),
+        icon: newCatIcon || '📦'
+      });
+      if (created) {
+        setProductForm(prev => ({ ...prev, category: created.id }));
+        setNewCatName('');
+        setShowAddCategoryInline(false);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsCreatingCategory(false);
+    }
   };
 
   const handleProductFormSubmit = async (e) => {
@@ -718,7 +758,10 @@ export default function AdminPortal() {
         <div className="bg-[#111111] text-white p-5 rounded-2xl shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 border border-neutral-800">
           <div className="flex items-center gap-3">
             <button
-              onClick={() => setCurrentView('home')}
+              onClick={() => {
+                window.history.pushState({}, '', '/');
+                setCurrentView('home');
+              }}
               className="p-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition cursor-pointer"
               title="Return to Storefront"
             >
@@ -729,8 +772,22 @@ export default function AdminPortal() {
                 <Shield className="w-5 h-5 text-[#D71920]" />
                 <h1 className="text-lg font-black text-white">Bachat Bazar Admin Control</h1>
               </div>
-              <p className="text-xs text-neutral-400">Store Management, Two-Tier Pricing & Meta Compliance</p>
+              <p className="text-xs text-neutral-400">Store Management • WhatsApp OTP Authenticated (+91 7073222340)</p>
             </div>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => {
+                logout();
+                window.history.pushState({}, '', '/admin');
+                setCurrentView('admin');
+                showToast('Admin logged out successfully', 'info');
+              }}
+              className="px-3 py-1.5 bg-red-950/80 hover:bg-red-900 border border-red-800 text-red-200 text-xs font-bold rounded-xl transition cursor-pointer"
+            >
+              Log Out Admin
+            </button>
           </div>
 
           {/* Admin Navigation Tabs */}
@@ -738,11 +795,21 @@ export default function AdminPortal() {
             <button
               onClick={() => setActiveTab('dashboard')}
               className={`px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 cursor-pointer ${
-                activeTab === 'dashboard' ? 'bg-[#D71920] text-white' : 'text-neutral-400 hover:text-white'
+                activeTab === 'dashboard' ? 'bg-[#D71920] text-white shadow-sm' : 'text-neutral-400 hover:text-white'
               }`}
             >
               <LayoutDashboard className="w-3.5 h-3.5" />
               Overview
+            </button>
+
+            <button
+              onClick={() => setActiveTab('analytics')}
+              className={`px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 cursor-pointer ${
+                activeTab === 'analytics' ? 'bg-[#D71920] text-white shadow-sm' : 'text-emerald-400 hover:text-white'
+              }`}
+            >
+              <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Sales Analytics</span>
             </button>
 
             <button
@@ -893,7 +960,7 @@ export default function AdminPortal() {
               <div className="lg:col-span-8 bg-white p-5 rounded-2xl border border-neutral-200 shadow-sm space-y-4">
                 <div className="flex items-center justify-between">
                   <h3 className="font-black text-sm text-[#111111] uppercase tracking-wider">Recent Orders</h3>
-                  <button onClick={() => setActiveTab('orders')} className="text-xs font-bold text-[#D71920] hover:underline">
+                  <button onClick={() => setActiveTab('orders')} className="text-xs font-bold text-[#D71920] hover:underline cursor-pointer">
                     View All Orders →
                   </button>
                 </div>
@@ -915,7 +982,7 @@ export default function AdminPortal() {
                         <select
                           value={ord.status}
                           onChange={(e) => handleUpdateOrderStatus(ord.id, e.target.value)}
-                          className="bg-[#F7F7F7] border border-neutral-300 rounded-lg px-2 py-1 text-xs font-bold outline-none"
+                          className="bg-[#F7F7F7] border border-neutral-300 rounded-lg px-2 py-1 text-xs font-bold outline-none cursor-pointer"
                         >
                           <option value="Pending">Pending</option>
                           <option value="Confirmed">Confirmed</option>
@@ -930,16 +997,24 @@ export default function AdminPortal() {
                 </div>
               </div>
 
-              {/* Right: Quick Product Controls */}
+              {/* Right: Quick Store Operations & Analytics Shortcut */}
               <div className="lg:col-span-4 bg-white p-5 rounded-2xl border border-neutral-200 shadow-sm space-y-4">
                 <h3 className="font-black text-sm text-[#111111] uppercase tracking-wider">Store Operations</h3>
                 
                 <button
                   onClick={handleOpenAddProduct}
-                  className="w-full py-3 bg-[#D71920] hover:bg-[#B5141A] text-white font-bold text-xs rounded-xl transition shadow-red-glow flex items-center justify-center gap-2"
+                  className="w-full py-3 bg-[#D71920] hover:bg-[#B5141A] text-white font-bold text-xs rounded-xl transition shadow-red-glow flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Plus className="w-4 h-4" />
                   <span>Add New Product</span>
+                </button>
+
+                <button
+                  onClick={() => setActiveTab('analytics')}
+                  className="w-full py-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-300 font-bold text-xs rounded-xl transition flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <TrendingUp className="w-4 h-4" />
+                  <span>View Full Sales Analytics →</span>
                 </button>
 
                 <div className="p-4 bg-[#F7F7F7] rounded-xl border border-neutral-200 space-y-2 text-xs">
@@ -952,7 +1027,25 @@ export default function AdminPortal() {
 
             </div>
 
+            {/* Embedded Live Sales Analytics Suite in Dashboard */}
+            <SalesAnalytics
+              orders={orders}
+              products={products}
+              customers={customers}
+              stats={stats}
+            />
+
           </div>
+        )}
+
+        {/* TAB: Dedicated Sales Analytics View */}
+        {activeTab === 'analytics' && (
+          <SalesAnalytics
+            orders={orders}
+            products={products}
+            customers={customers}
+            stats={stats}
+          />
         )}
 
         {/* TAB 2: Products Manager (CRUD) */}
@@ -997,7 +1090,12 @@ export default function AdminPortal() {
                           <p className="text-[10px] text-neutral-500">{p.brand}</p>
                         </div>
                       </td>
-                      <td className="p-3 capitalize">{p.category}</td>
+                      <td className="p-3">
+                        <span className="inline-flex items-center gap-1 bg-neutral-100 border border-neutral-200 px-2 py-0.5 rounded text-[11px] font-medium text-neutral-800">
+                          <span>{categories.find(c => c.id === p.category)?.icon || '📦'}</span>
+                          <span>{categories.find(c => c.id === p.category)?.name || p.category}</span>
+                        </span>
+                      </td>
                       <td className="p-3">{p.unit}</td>
                       <td className="p-3 text-right line-through text-neutral-400">{formatINR(p.mrp)}</td>
                       <td className="p-3 text-right font-bold">{formatINR(p.normalPrice)}</td>
@@ -2533,16 +2631,120 @@ export default function AdminPortal() {
                   />
                 </div>
                 <div>
-                  <label className="block font-semibold text-neutral-700 mb-1">Category</label>
-                  <select
-                    value={productForm.category}
-                    onChange={(e) => setProductForm({ ...productForm, category: e.target.value })}
-                    className="w-full bg-[#F7F7F7] border border-neutral-300 rounded-lg px-3 py-2 outline-none focus:border-[#D71920]"
-                  >
-                    {categories.map((c) => (
-                      <option key={c.id} value={c.id}>{c.name}</option>
-                    ))}
-                  </select>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="block font-semibold text-neutral-700">Category *</label>
+                    <button
+                      type="button"
+                      onClick={() => setShowAddCategoryInline(!showAddCategoryInline)}
+                      className="text-[11px] text-[#D71920] hover:text-[#B5141A] font-bold flex items-center gap-1 cursor-pointer transition-colors"
+                    >
+                      <Plus className="w-3.5 h-3.5" />
+                      {showAddCategoryInline ? 'Choose Existing' : '+ Add New Category'}
+                    </button>
+                  </div>
+
+                  {!showAddCategoryInline ? (
+                    <select
+                      value={productForm.category}
+                      onChange={(e) => {
+                        if (e.target.value === '__add_new__') {
+                          setShowAddCategoryInline(true);
+                        } else {
+                          setProductForm({ ...productForm, category: e.target.value });
+                        }
+                      }}
+                      className="w-full bg-[#F7F7F7] border border-neutral-300 rounded-lg px-3 py-2 outline-none focus:border-[#D71920] font-medium"
+                    >
+                      {categories.map((c) => (
+                        <option key={c.id} value={c.id}>
+                          {c.icon ? `${c.icon} ` : ''}{c.name}
+                        </option>
+                      ))}
+                      <option value="__add_new__" className="font-bold text-[#D71920]">
+                        ➕ + Add New Category...
+                      </option>
+                    </select>
+                  ) : (
+                    <div className="bg-amber-50/80 border border-amber-300 rounded-xl p-3 space-y-2.5 shadow-sm">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-bold text-amber-900 flex items-center gap-1">
+                          ✨ Create New Category
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => setShowAddCategoryInline(false)}
+                          className="text-neutral-400 hover:text-neutral-700 text-xs font-semibold cursor-pointer"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+
+                      <div className="flex gap-2">
+                        <div className="w-16">
+                          <label className="block text-[10px] font-bold text-neutral-600 mb-0.5">Icon</label>
+                          <select
+                            value={newCatIcon}
+                            onChange={(e) => setNewCatIcon(e.target.value)}
+                            className="w-full bg-white border border-amber-300 rounded-lg py-1.5 px-1 text-center text-sm font-bold outline-none focus:border-[#D71920]"
+                          >
+                            <option value="📦">📦 General</option>
+                            <option value="🌾">🌾 Grocery</option>
+                            <option value="🥛">🥛 Dairy</option>
+                            <option value="🥦">🥦 Veggies</option>
+                            <option value="🍪">🍪 Snacks</option>
+                            <option value="☕">☕ Drinks</option>
+                            <option value="🧼">🧼 Clean</option>
+                            <option value="🧴">🧴 Care</option>
+                            <option value="🏠">🏠 Home</option>
+                            <option value="🍫">🍫 Sweets</option>
+                            <option value="🥤">🥤 Beverages</option>
+                            <option value="🍎">🍎 Fruits</option>
+                            <option value="🍞">🍞 Bakery</option>
+                            <option value="🧃">🧃 Juices</option>
+                            <option value="🍯">🍯 Spices</option>
+                            <option value="🍜">🍜 Noodles</option>
+                            <option value="🧂">🧂 Masala</option>
+                          </select>
+                        </div>
+
+                        <div className="flex-1">
+                          <label className="block text-[10px] font-bold text-neutral-600 mb-0.5">Category Name *</label>
+                          <input
+                            type="text"
+                            value={newCatName}
+                            onChange={(e) => setNewCatName(e.target.value)}
+                            placeholder="e.g. Organic & Spices"
+                            className="w-full bg-white border border-amber-300 rounded-lg px-3 py-1.5 text-xs outline-none focus:border-[#D71920] font-medium"
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter') {
+                                e.preventDefault();
+                                handleCreateNewCategory();
+                              }
+                            }}
+                          />
+                        </div>
+                      </div>
+
+                      <button
+                        type="button"
+                        disabled={isCreatingCategory || !newCatName.trim()}
+                        onClick={handleCreateNewCategory}
+                        className="w-full bg-[#D71920] hover:bg-[#B5141A] disabled:opacity-50 text-white font-bold text-xs py-1.5 px-3 rounded-lg flex items-center justify-center gap-1.5 shadow-sm transition-all cursor-pointer"
+                      >
+                        {isCreatingCategory ? (
+                          <>
+                            <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                            <span>Saving & Selecting...</span>
+                          </>
+                        ) : (
+                          <>
+                            <CheckCircle2 className="w-3.5 h-3.5" />
+                            <span>Save & Select Category</span>
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  )}
                 </div>
               </div>
 

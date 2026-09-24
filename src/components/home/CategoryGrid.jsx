@@ -12,12 +12,18 @@ export default function CategoryGrid() {
   };
 
   // Custom icon mapper for clean modern category icons
-  const getCategoryIcon = (id) => {
-    switch (id) {
+  const getCategoryIcon = (cat) => {
+    if (cat.icon) {
+      return <span className="text-2xl">{cat.icon}</span>;
+    }
+    switch (cat.id) {
       case 'grocery': return <ShoppingBag className="w-6 h-6 text-[#D71920]" />;
-      case 'fruits-veg': return <Apple className="w-6 h-6 text-[#D71920]" />;
-      case 'dairy': return <Milk className="w-6 h-6 text-[#D71920]" />;
-      case 'snacks': return <Coffee className="w-6 h-6 text-[#D71920]" />;
+      case 'fruits-veg':
+      case 'fruits-vegetables': return <Apple className="w-6 h-6 text-[#D71920]" />;
+      case 'dairy':
+      case 'dairy-bakery': return <Milk className="w-6 h-6 text-[#D71920]" />;
+      case 'snacks':
+      case 'snacks-beverages': return <Coffee className="w-6 h-6 text-[#D71920]" />;
       case 'personal-care': return <Sparkles className="w-6 h-6 text-[#D71920]" />;
       case 'household': return <Home className="w-6 h-6 text-[#D71920]" />;
       case 'cleaning': return <Sparkle className="w-6 h-6 text-[#D71920]" />;
@@ -59,7 +65,7 @@ export default function CategoryGrid() {
             >
               {/* Category Icon */}
               <div className="w-12 h-12 rounded-xl bg-red-50/70 border border-red-100 flex items-center justify-center group-hover:scale-110 transition">
-                {getCategoryIcon(cat.id)}
+                {getCategoryIcon(cat)}
               </div>
 
               {/* Category Name */}

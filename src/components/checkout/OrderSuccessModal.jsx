@@ -13,7 +13,9 @@ import {
   ShoppingBag,
   MapPin,
   Clock,
-  ArrowRight
+  ArrowRight,
+  X,
+  Home
 } from 'lucide-react';
 
 export default function OrderSuccessModal() {
@@ -39,6 +41,12 @@ export default function OrderSuccessModal() {
 
   const order = lastPlacedOrder;
 
+  const handleClose = () => {
+    setLastPlacedOrder(null);
+    setCurrentView('home');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handlePrint = () => {
     window.print();
   };
@@ -46,6 +54,7 @@ export default function OrderSuccessModal() {
   const handleContinueShopping = () => {
     setLastPlacedOrder(null);
     setCurrentView('catalog');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleViewOrders = () => {
@@ -54,11 +63,22 @@ export default function OrderSuccessModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/75 backdrop-blur-sm p-4 flex items-center justify-center">
-      <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden relative max-h-[95vh] flex flex-col print:max-w-none print:shadow-none print:rounded-none">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/75 backdrop-blur-sm p-4 flex items-center justify-center animate-fadeIn">
+      {/* Backdrop click to close */}
+      <div className="fixed inset-0" onClick={handleClose} />
+
+      <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden relative max-h-[95vh] flex flex-col print:max-w-none print:shadow-none print:rounded-none z-10 border border-neutral-200">
         
-        {/* Printable / Viewable Header */}
+        {/* Printable / Viewable Header with Close Button */}
         <div className="p-6 bg-[#111111] text-white text-center border-b border-neutral-800 relative">
+          <button
+            onClick={handleClose}
+            className="absolute right-4 top-4 p-2 text-neutral-400 hover:text-white rounded-xl hover:bg-neutral-800 transition cursor-pointer print:hidden"
+            title="Close"
+          >
+            <X className="w-5 h-5" />
+          </button>
+
           <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-2 text-white shadow-lg">
             <CheckCircle2 className="w-7 h-7" />
           </div>
@@ -66,7 +86,7 @@ export default function OrderSuccessModal() {
             Order Placed Successfully!
           </h2>
           <p className="text-xs text-neutral-400 mt-1">
-            Thank you for shopping with Bachat Bazar. Your order has been confirmed.
+            Thank you for shopping with Bachat Bazar. Your order has been registered and WhatsApp has been launched.
           </p>
 
           <div className="mt-3 inline-block bg-neutral-900 border border-neutral-700 px-3 py-1 rounded-lg text-xs font-mono font-bold text-[#D71920]">
@@ -173,7 +193,7 @@ export default function OrderSuccessModal() {
             {/* Print Slip */}
             <button
               onClick={handlePrint}
-              className="px-3.5 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-xs font-bold rounded-lg transition flex items-center gap-1.5"
+              className="px-3.5 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-xs font-bold rounded-lg transition flex items-center gap-1.5 cursor-pointer"
             >
               <Printer className="w-4 h-4" />
               <span>Print Invoice</span>
@@ -184,7 +204,7 @@ export default function OrderSuccessModal() {
               href={getOrderWhatsAppUrl(order, settings.whatsappNumber)}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold rounded-lg transition flex items-center gap-1.5"
+              className="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold rounded-lg transition flex items-center gap-1.5 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Send on WhatsApp</span>
@@ -193,15 +213,16 @@ export default function OrderSuccessModal() {
 
           <div className="flex items-center gap-2">
             <button
-              onClick={handleViewOrders}
-              className="px-4 py-2 border border-neutral-300 hover:border-black text-xs font-bold rounded-lg transition"
+              onClick={handleClose}
+              className="px-4 py-2 border border-neutral-300 hover:border-black text-xs font-bold rounded-lg transition cursor-pointer flex items-center gap-1.5"
             >
-              View My Orders
+              <X className="w-4 h-4" />
+              <span>Close</span>
             </button>
 
             <button
               onClick={handleContinueShopping}
-              className="px-4 py-2 bg-[#D71920] hover:bg-[#B5141A] text-white text-xs font-bold rounded-lg transition flex items-center gap-1.5"
+              className="px-4 py-2 bg-[#D71920] hover:bg-[#B5141A] text-white text-xs font-bold rounded-lg transition flex items-center gap-1.5 cursor-pointer"
             >
               <span>Continue Shopping</span>
               <ArrowRight className="w-4 h-4" />

@@ -36,12 +36,18 @@ export default function CartDrawer() {
     setIsCheckoutOpen
   } = useCart();
 
-  const { isMember, openAuthModal } = useAuth();
-  const { setCurrentView } = useStore();
+  const { user, isMember, openAuthModal } = useAuth();
+  const { setCurrentView, showToast } = useStore();
 
   if (!isCartOpen) return null;
 
   const handleProceedCheckout = () => {
+    if (!user) {
+      setIsCartOpen(false);
+      openAuthModal('login');
+      showToast('Kripya checkout ke liye WhatsApp OTP se login karein', 'info');
+      return;
+    }
     setIsCartOpen(false);
     setIsCheckoutOpen(true);
   };

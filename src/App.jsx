@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useStore } from './context/StoreContext';
 import { useAuth } from './context/AuthContext';
-import DemoAccountSwitcher from './components/common/DemoAccountSwitcher';
 import Toast from './components/common/Toast';
 import TopBanner from './components/layout/TopBanner';
 import Header from './components/layout/Header';
@@ -26,15 +25,32 @@ import OrderSuccessModal from './components/checkout/OrderSuccessModal';
 import AuthModal from './components/account/AuthModal';
 import AccountModal from './components/account/AccountModal';
 
-// Admin View
+// Admin Views
 import AdminPortal from './components/admin/AdminPortal';
+import AdminLoginView from './components/admin/AdminLoginView';
 
 // Legal & WhatsApp Policy Views
 import LegalPages from './components/legal/LegalPages';
 
 export default function App() {
-  const { currentView } = useStore();
+  const { currentView, setCurrentView } = useStore();
   const { isAdmin } = useAuth();
+
+  // Listen to URL routing (e.g. /admin or #admin)
+  useEffect(() => {
+    const handleUrlRouting = () => {
+      const path = window.location.pathname.toLowerCase();
+      const hash = window.location.hash.toLowerCase();
+
+      if (path.startsWith('/admin') || hash.startsWith('#admin')) {
+        setCurrentView('admin');
+      }
+    };
+
+    handleUrlRouting();
+    window.addEventListener('popstate', handleUrlRouting);
+    return () => window.removeEventListener('popstate', handleUrlRouting);
+  }, [setCurrentView]);
 
   const getLegalPolicyId = (view) => {
     if (view === 'opt-out-page') return 'opt-out';
@@ -42,12 +58,11 @@ export default function App() {
     return 'privacy';
   };
 
-  // If currently in Admin view, render Admin Portal
-  if (currentView === 'admin') {
+  // If currently in Admin view (URL /admin or www.bachatbazar.space/admin)
+  if (currentView === 'admin' || window.location.pathname.startsWith('/admin')) {
     return (
       <div className="min-h-screen bg-[#F7F7F7] flex flex-col justify-between">
-        <DemoAccountSwitcher />
-        <AdminPortal />
+        {isAdmin ? <AdminPortal /> : <AdminLoginView />}
         <Toast />
       </div>
     );
@@ -55,9 +70,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#F7F7F7] flex flex-col justify-between">
-      
-      {/* Top Demo Testing Bar */}
-      <DemoAccountSwitcher />
 
       {/* Announcements & Location Header */}
       <TopBanner />

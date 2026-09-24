@@ -126,6 +126,28 @@ export function StoreProvider({ children }) {
     }
   };
 
+  // Category Operations
+  const addCategory = async (categoryData) => {
+    try {
+      const res = await fetch('/api/categories', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(categoryData)
+      });
+      const data = await res.json();
+      if (data.success && data.category) {
+        await fetchCategories();
+        showToast(`Category "${data.category.name}" added successfully!`, 'success');
+        return data.category;
+      }
+      showToast(data.message || 'Error adding category', 'error');
+      return null;
+    } catch (err) {
+      showToast('Network error adding category', 'error');
+      return null;
+    }
+  };
+
   // Product Admin Operations
   const addProduct = async (productData) => {
     try {
@@ -285,6 +307,8 @@ export function StoreProvider({ children }) {
         setCurrentView,
         toast,
         showToast,
+        addCategory,
+        fetchCategories,
         addProduct,
         updateProduct,
         deleteProduct,

@@ -27,6 +27,42 @@ export function AuthProvider({ children }) {
     }
   }, [user]);
 
+  const sendOtp = async ({ phone, role = 'customer' }) => {
+    try {
+      const res = await fetch('/api/auth/send-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone, role })
+      });
+      const data = await res.json();
+      return data;
+    } catch (err) {
+      console.error(err);
+      return { success: false, message: 'Server connection failed' };
+    }
+  };
+
+  const verifyOtp = async ({ phone, otp, role = 'customer', name, email, joinMembership }) => {
+    try {
+      const res = await fetch('/api/auth/verify-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone, otp, role, name, email, joinMembership })
+      });
+      const data = await res.json();
+      if (data.success && data.user) {
+        setUser(data.user);
+        setIsAuthModalOpen(false);
+        return { success: true, user: data.user, message: data.message };
+      } else {
+        return { success: false, message: data.message || 'OTP verification failed' };
+      }
+    } catch (err) {
+      console.error(err);
+      return { success: false, message: 'Server connection failed' };
+    }
+  };
+
   const login = async (identifier) => {
     try {
       const res = await fetch('/api/auth/login', {
@@ -196,6 +232,8 @@ export function AuthProvider({ children }) {
         isAdmin: user?.role === 'admin',
         login,
         register,
+        sendOtp,
+        verifyOtp,
         logout,
         toggleMembership,
         applyMembership,

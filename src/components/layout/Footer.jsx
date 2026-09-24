@@ -260,6 +260,16 @@ export default function Footer() {
             <button onClick={() => setCurrentView('legal-data-deletion')} className="hover:text-neutral-300">Data Deletion</button>
             <span>•</span>
             <button onClick={() => setCurrentView('legal-grievance')} className="hover:text-neutral-300">Grievance</button>
+            <span>•</span>
+            <button
+              onClick={() => {
+                window.history.pushState({}, '', '/admin');
+                setCurrentView('admin');
+              }}
+              className="hover:text-neutral-300 opacity-60 hover:opacity-100"
+            >
+              Admin
+            </button>
           </div>
         </div>
 

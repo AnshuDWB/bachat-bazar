@@ -18,8 +18,9 @@ import {
 
 export default function ProductModal() {
   const { selectedProduct, setSelectedProduct, settings } = useStore();
-  const { isMember, openAuthModal } = useAuth();
+  const { user, isMember, openAuthModal } = useAuth();
   const { addToCart, setIsCheckoutOpen, setIsCartOpen } = useCart();
+  const { showToast } = useStore();
 
   const [qty, setQty] = useState(1);
 
@@ -37,6 +38,11 @@ export default function ProductModal() {
   const handleBuyNow = () => {
     addToCart(product, qty);
     setSelectedProduct(null);
+    if (!user) {
+      openAuthModal('login');
+      showToast('Kripya checkout ke liye WhatsApp OTP se login karein', 'info');
+      return;
+    }
     setIsCheckoutOpen(true);
   };
 

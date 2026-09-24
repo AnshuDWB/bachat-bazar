@@ -83,9 +83,83 @@
       "icon": "🏠",
       "image": "https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=500&auto=format&fit=crop&q=80",
       "count": "5+ items"
+    },
+    {
+      "id": "dry-fruits-spices",
+      "name": "Dry Fruits & Spices",
+      "icon": "🥜",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&auto=format&fit=crop&q=80",
+      "count": "0 items"
+    },
+    {
+      "id": "other",
+      "name": "other",
+      "icon": "🏠",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&auto=format&fit=crop&q=80",
+      "count": "0 items"
+    },
+    {
+      "id": "audit-fresh-specials-1790234470323",
+      "name": "Audit Fresh Specials 1790234470323",
+      "icon": "🌟",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&auto=format&fit=crop&q=80",
+      "count": "0 items"
+    },
+    {
+      "id": "audit-fresh-specials-1790234529379",
+      "name": "Audit Fresh Specials 1790234529379",
+      "icon": "🌟",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&auto=format&fit=crop&q=80",
+      "count": "0 items"
+    },
+    {
+      "id": "audit-fresh-specials-1790234568502",
+      "name": "Audit Fresh Specials 1790234568502",
+      "icon": "🌟",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&auto=format&fit=crop&q=80",
+      "count": "0 items"
+    },
+    {
+      "id": "audit-fresh-specials-1790234913887",
+      "name": "Audit Fresh Specials 1790234913887",
+      "icon": "🌟",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&auto=format&fit=crop&q=80",
+      "count": "0 items"
     }
   ],
   "products": [
+    {
+      "id": "prod-1790234470330",
+      "name": "Organic Basmati Rice 5kg Premium",
+      "brand": "Bachat Bazar Special",
+      "category": "audit-fresh-specials-1790234470323",
+      "unit": "5 kg",
+      "mrp": 550,
+      "normalPrice": 480,
+      "memberPrice": 420,
+      "stock": 47,
+      "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600",
+      "description": "Long grain aromatic aged basmati rice for festive biryanis.",
+      "isFeatured": false,
+      "isDealOfDay": false,
+      "rating": 4.8
+    },
+    {
+      "id": "prod-1790234136408",
+      "name": "Tata namak",
+      "brand": "Bachat Bazar",
+      "category": "other",
+      "unit": "1 kg",
+      "mrp": 30,
+      "normalPrice": 27,
+      "memberPrice": 25,
+      "stock": 50,
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+      "description": "ok iodn ",
+      "isFeatured": false,
+      "isDealOfDay": false,
+      "rating": 4.8
+    },
     {
       "id": "prod-1789996140393",
       "name": "aata ",
@@ -95,7 +169,7 @@
       "mrp": 100,
       "normalPrice": 80,
       "memberPrice": 64,
-      "stock": 42,
+      "stock": 39,
       "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80",
       "description": "mast aata",
       "isFeatured": false,
@@ -111,7 +185,7 @@
       "mrp": 280,
       "normalPrice": 249,
       "memberPrice": 229,
-      "stock": 81,
+      "stock": 75,
       "isFeatured": true,
       "isDealOfDay": true,
       "rating": 4.8,
@@ -127,7 +201,7 @@
       "mrp": 175,
       "normalPrice": 145,
       "memberPrice": 132,
-      "stock": 120,
+      "stock": 111,
       "isFeatured": true,
       "isDealOfDay": true,
       "rating": 4.7,
@@ -143,7 +217,7 @@
       "mrp": 450,
       "normalPrice": 389,
       "memberPrice": 349,
-      "stock": 60,
+      "stock": 53,
       "isFeatured": true,
       "isDealOfDay": true,
       "rating": 4.9,
@@ -159,7 +233,7 @@
       "mrp": 210,
       "normalPrice": 179,
       "memberPrice": 165,
-      "stock": 95,
+      "stock": 90,
       "isFeatured": true,
       "isDealOfDay": false,
       "rating": 4.8,
@@ -175,7 +249,7 @@
       "mrp": 185,
       "normalPrice": 155,
       "memberPrice": 139,
-      "stock": 110,
+      "stock": 106,
       "isFeatured": true,
       "isDealOfDay": false,
       "rating": 4.7,
@@ -191,7 +265,7 @@
       "mrp": 30,
       "normalPrice": 28,
       "memberPrice": 24,
-      "stock": 250,
+      "stock": 247,
       "isFeatured": false,
       "isDealOfDay": false,
       "rating": 4.9,
@@ -207,7 +281,7 @@
       "mrp": 260,
       "normalPrice": 235,
       "memberPrice": 215,
-      "stock": 75,
+      "stock": 70,
       "isFeatured": true,
       "isDealOfDay": false,
       "rating": 4.6,
@@ -223,7 +297,7 @@
       "mrp": 98,
       "normalPrice": 85,
       "memberPrice": 74,
-      "stock": 140,
+      "stock": 135,
       "isFeatured": false,
       "isDealOfDay": false,
       "rating": 4.7,
@@ -239,7 +313,7 @@
       "mrp": 285,
       "normalPrice": 275,
       "memberPrice": 255,
-      "stock": 80,
+      "stock": 78,
       "isFeatured": true,
       "isDealOfDay": true,
       "rating": 4.9,
@@ -255,7 +329,7 @@
       "mrp": 74,
       "normalPrice": 72,
       "memberPrice": 65,
-      "stock": 90,
+      "stock": 89,
       "isFeatured": false,
       "isDealOfDay": false,
       "rating": 4.8,
@@ -271,7 +345,7 @@
       "mrp": 95,
       "normalPrice": 89,
       "memberPrice": 79,
-      "stock": 50,
+      "stock": 49,
       "isFeatured": true,
       "isDealOfDay": false,
       "rating": 4.8,
@@ -287,7 +361,7 @@
       "mrp": 55,
       "normalPrice": 50,
       "memberPrice": 44,
-      "stock": 65,
+      "stock": 61,
       "isFeatured": false,
       "isDealOfDay": false,
       "rating": 4.6,
@@ -303,7 +377,7 @@
       "mrp": 320,
       "normalPrice": 285,
       "memberPrice": 255,
-      "stock": 70,
+      "stock": 64,
       "isFeatured": true,
       "isDealOfDay": true,
       "rating": 4.8,
@@ -367,7 +441,7 @@
       "mrp": 520,
       "normalPrice": 440,
       "memberPrice": 395,
-      "stock": 85,
+      "stock": 84,
       "isFeatured": true,
       "isDealOfDay": true,
       "rating": 4.8,
@@ -415,7 +489,7 @@
       "mrp": 750,
       "normalPrice": 625,
       "memberPrice": 560,
-      "stock": 55,
+      "stock": 54,
       "isFeatured": true,
       "isDealOfDay": true,
       "rating": 4.8,
@@ -479,7 +553,7 @@
       "mrp": 295,
       "normalPrice": 250,
       "memberPrice": 219,
-      "stock": 90,
+      "stock": 87,
       "isFeatured": true,
       "isDealOfDay": true,
       "rating": 4.9,
@@ -705,7 +779,7 @@
       "phone": "9664185654",
       "email": "9664185654@bachatbazar.com",
       "role": "customer",
-      "isMember": true,
+      "isMember": false,
       "memberId": "BB-MEM-5100",
       "memberSince": "2026-09-21T13:29:00.169Z",
       "addresses": [
@@ -748,9 +822,1308 @@
           "isDefault": true
         }
       ]
+    },
+    {
+      "id": "user-1790231063167",
+      "name": "Ramesh Sharma",
+      "phone": "9876500123",
+      "email": "9876500123@bachatbazar.com",
+      "role": "customer",
+      "isMember": false,
+      "memberId": null,
+      "memberSince": null,
+      "addresses": [
+        {
+          "id": "addr-1790231063167",
+          "name": "Ramesh Sharma",
+          "phone": "9876500123",
+          "house": "House / Flat No.",
+          "area": "Aravali Vihar / Sector",
+          "landmark": "Near Mansa Chowk",
+          "city": "Bhiwadi",
+          "district": "Alwar",
+          "state": "Rajasthan",
+          "pincode": "301019",
+          "isDefault": true
+        }
+      ]
     }
   ],
   "orders": [
+    {
+      "id": "BB-ORD-86148",
+      "date": "2026-09-24T07:28:33.921Z",
+      "customer": {
+        "id": "guest",
+        "name": "Guest Customer",
+        "phone": "",
+        "email": "",
+        "isMember": false,
+        "memberId": null
+      },
+      "shippingAddress": {},
+      "items": [
+        {
+          "id": "prod-1790234470330",
+          "name": "Organic Basmati Rice 5kg Premium",
+          "brand": "Bachat Bazar Special",
+          "category": "audit-fresh-specials-1790234470323",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600",
+          "quantity": 1,
+          "mrp": 550,
+          "normalPrice": 480,
+          "memberPrice": 420,
+          "appliedPrice": 480,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        }
+      ],
+      "mrpTotal": 550,
+      "normalTotal": 480,
+      "subtotal": 480,
+      "deliveryCharge": 30,
+      "total": 510,
+      "memberSavings": 0,
+      "totalSavingsFromMRP": 70,
+      "paymentMethod": "COD",
+      "paymentStatus": "Pending (Cash on Delivery)",
+      "status": "Confirmed",
+      "deliveryNotes": "",
+      "statusHistory": [
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T07:28:33.921Z"
+        },
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T07:28:33.926Z"
+        }
+      ]
+    },
+    {
+      "id": "BB-ORD-77782",
+      "date": "2026-09-24T07:22:48.515Z",
+      "customer": {
+        "id": "guest",
+        "name": "Guest Customer",
+        "phone": "",
+        "email": "",
+        "isMember": false,
+        "memberId": null
+      },
+      "shippingAddress": {},
+      "items": [
+        {
+          "id": "prod-1790234470330",
+          "name": "Organic Basmati Rice 5kg Premium",
+          "brand": "Bachat Bazar Special",
+          "category": "audit-fresh-specials-1790234470323",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600",
+          "quantity": 1,
+          "mrp": 550,
+          "normalPrice": 480,
+          "memberPrice": 420,
+          "appliedPrice": 480,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        }
+      ],
+      "mrpTotal": 550,
+      "normalTotal": 480,
+      "subtotal": 480,
+      "deliveryCharge": 30,
+      "total": 510,
+      "memberSavings": 0,
+      "totalSavingsFromMRP": 70,
+      "paymentMethod": "COD",
+      "paymentStatus": "Pending (Cash on Delivery)",
+      "status": "Confirmed",
+      "deliveryNotes": "",
+      "statusHistory": [
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T07:22:48.515Z"
+        },
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T07:22:48.518Z"
+        }
+      ]
+    },
+    {
+      "id": "BB-ORD-62841",
+      "date": "2026-09-24T07:22:09.392Z",
+      "customer": {
+        "id": "guest",
+        "name": "Guest Customer",
+        "phone": "",
+        "email": "",
+        "isMember": false,
+        "memberId": null
+      },
+      "shippingAddress": {},
+      "items": [
+        {
+          "id": "prod-1790234470330",
+          "name": "Organic Basmati Rice 5kg Premium",
+          "brand": "Bachat Bazar Special",
+          "category": "audit-fresh-specials-1790234470323",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600",
+          "quantity": 1,
+          "mrp": 550,
+          "normalPrice": 480,
+          "memberPrice": 420,
+          "appliedPrice": 480,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        }
+      ],
+      "mrpTotal": 550,
+      "normalTotal": 480,
+      "subtotal": 480,
+      "deliveryCharge": 30,
+      "total": 510,
+      "memberSavings": 0,
+      "totalSavingsFromMRP": 70,
+      "paymentMethod": "COD",
+      "paymentStatus": "Pending (Cash on Delivery)",
+      "status": "Confirmed",
+      "deliveryNotes": "",
+      "statusHistory": [
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T07:22:09.392Z"
+        },
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T07:22:09.396Z"
+        }
+      ]
+    },
+    {
+      "id": "BB-ORD-22008",
+      "date": "2026-09-24T06:44:46.512Z",
+      "customer": {
+        "id": "user-1789997340169",
+        "name": "Anshuman ",
+        "phone": "9664185654",
+        "email": "9664185654@bachatbazar.com",
+        "isMember": false,
+        "memberId": "BB-MEM-5100"
+      },
+      "shippingAddress": {
+        "name": "Anshuman",
+        "phone": "9664185654",
+        "email": "9664185654@bachatbazar.com",
+        "house": "Flat 402, Ashiana Town",
+        "area": "Near Mansa Chowk, RTO Office Road",
+        "landmark": "Near Mansa Chowk",
+        "city": "Bhiwadi",
+        "state": "Rajasthan",
+        "pincode": "301019"
+      },
+      "items": [
+        {
+          "id": "prod-3",
+          "name": "India Gate Basmati Rice Feast Rozzana 5kg",
+          "brand": "India Gate",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 450,
+          "normalPrice": 389,
+          "memberPrice": 349,
+          "appliedPrice": 389,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-4",
+          "name": "Tata Sampann Unpolished Toor Dal 1kg",
+          "brand": "Tata Sampann",
+          "category": "grocery",
+          "unit": "1 kg",
+          "image": "https://images.unsplash.com/photo-1585994192700-4e782977d405?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 210,
+          "normalPrice": 179,
+          "memberPrice": 165,
+          "appliedPrice": 179,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-5",
+          "name": "Dhara Kachi Ghani Mustard Oil 1L",
+          "brand": "Dhara",
+          "category": "grocery",
+          "unit": "1 Litre Bottle",
+          "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 185,
+          "normalPrice": 155,
+          "memberPrice": 139,
+          "appliedPrice": 155,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-1",
+          "name": "Aashirvaad Shudh Chakki Atta 5kg",
+          "brand": "Aashirvaad",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 280,
+          "normalPrice": 249,
+          "memberPrice": 229,
+          "appliedPrice": 249,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-2",
+          "name": "Fortune Sunlite Refined Sunflower Oil 1L",
+          "brand": "Fortune",
+          "category": "grocery",
+          "unit": "1 Litre Pouch",
+          "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 175,
+          "normalPrice": 145,
+          "memberPrice": 132,
+          "appliedPrice": 145,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        }
+      ],
+      "mrpTotal": 1300,
+      "normalTotal": 1117,
+      "subtotal": 1117,
+      "deliveryCharge": 0,
+      "total": 1117,
+      "memberSavings": 0,
+      "totalSavingsFromMRP": 183,
+      "paymentMethod": "COD",
+      "paymentStatus": "Pending (Cash on Delivery)",
+      "status": "Confirmed",
+      "deliveryNotes": "",
+      "statusHistory": [
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T06:44:46.512Z"
+        }
+      ]
+    },
+    {
+      "id": "BB-ORD-98428",
+      "date": "2026-09-24T06:24:23.174Z",
+      "customer": {
+        "id": "user-1790231063167",
+        "name": "Ramesh Sharma",
+        "phone": "9876500123",
+        "email": "9876500123@bachatbazar.com",
+        "isMember": false,
+        "memberId": null
+      },
+      "shippingAddress": {
+        "name": "Ramesh Sharma",
+        "phone": "9876500123",
+        "email": "ramesh@example.com",
+        "house": "Flat 302, Tower B, Ashiana Town",
+        "area": "Aravali Vihar, Mansa Chowk",
+        "landmark": "Near Mansa Chowk",
+        "city": "Bhiwadi",
+        "state": "Rajasthan",
+        "pincode": "301019"
+      },
+      "items": [
+        {
+          "id": "prod-1789996140393",
+          "name": "aata ",
+          "brand": "Bachat Bazar",
+          "category": "dairy-bakery",
+          "unit": "1 kg",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80",
+          "quantity": 2,
+          "mrp": 100,
+          "normalPrice": 80,
+          "memberPrice": 64,
+          "appliedPrice": 80,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        }
+      ],
+      "mrpTotal": 200,
+      "normalTotal": 160,
+      "subtotal": 160,
+      "deliveryCharge": 30,
+      "total": 190,
+      "memberSavings": 0,
+      "totalSavingsFromMRP": 40,
+      "paymentMethod": "COD",
+      "paymentStatus": "Pending (Cash on Delivery)",
+      "status": "Confirmed",
+      "deliveryNotes": "Please ring bell",
+      "statusHistory": [
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T06:24:23.174Z"
+        }
+      ]
+    },
+    {
+      "id": "BB-ORD-13449",
+      "date": "2026-09-24T06:15:42.381Z",
+      "customer": {
+        "id": "user-1789997340169",
+        "name": "Anshuman ",
+        "phone": "9664185654",
+        "email": "9664185654@bachatbazar.com",
+        "isMember": false,
+        "memberId": "BB-MEM-5100"
+      },
+      "shippingAddress": {
+        "name": "Anshuman",
+        "phone": "9664185654",
+        "email": "9664185654@bachatbazar.com",
+        "house": "Flat 402, Ashiana Town",
+        "area": "Near Mansa Chowk, RTO Office Road",
+        "landmark": "Near Mansa Chowk",
+        "city": "Bhiwadi",
+        "state": "Rajasthan",
+        "pincode": "301019"
+      },
+      "items": [
+        {
+          "id": "prod-4",
+          "name": "Tata Sampann Unpolished Toor Dal 1kg",
+          "brand": "Tata Sampann",
+          "category": "grocery",
+          "unit": "1 kg",
+          "image": "https://images.unsplash.com/photo-1585994192700-4e782977d405?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 210,
+          "normalPrice": 179,
+          "memberPrice": 165,
+          "appliedPrice": 179,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-5",
+          "name": "Dhara Kachi Ghani Mustard Oil 1L",
+          "brand": "Dhara",
+          "category": "grocery",
+          "unit": "1 Litre Bottle",
+          "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 185,
+          "normalPrice": 155,
+          "memberPrice": 139,
+          "appliedPrice": 155,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-3",
+          "name": "India Gate Basmati Rice Feast Rozzana 5kg",
+          "brand": "India Gate",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 450,
+          "normalPrice": 389,
+          "memberPrice": 349,
+          "appliedPrice": 389,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-2",
+          "name": "Fortune Sunlite Refined Sunflower Oil 1L",
+          "brand": "Fortune",
+          "category": "grocery",
+          "unit": "1 Litre Pouch",
+          "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 175,
+          "normalPrice": 145,
+          "memberPrice": 132,
+          "appliedPrice": 145,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-1",
+          "name": "Aashirvaad Shudh Chakki Atta 5kg",
+          "brand": "Aashirvaad",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 280,
+          "normalPrice": 249,
+          "memberPrice": 229,
+          "appliedPrice": 249,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        }
+      ],
+      "mrpTotal": 1300,
+      "normalTotal": 1117,
+      "subtotal": 1117,
+      "deliveryCharge": 0,
+      "total": 1117,
+      "memberSavings": 0,
+      "totalSavingsFromMRP": 183,
+      "paymentMethod": "COD",
+      "paymentStatus": "Pending (Cash on Delivery)",
+      "status": "Confirmed",
+      "deliveryNotes": "",
+      "statusHistory": [
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T06:15:42.381Z"
+        }
+      ]
+    },
+    {
+      "id": "BB-ORD-84023",
+      "date": "2026-09-24T06:10:11.684Z",
+      "customer": {
+        "id": "user-1789997340169",
+        "name": "Anshuman ",
+        "phone": "9664185654",
+        "email": "9664185654@bachatbazar.com",
+        "isMember": true,
+        "memberId": "BB-MEM-5100"
+      },
+      "shippingAddress": {
+        "name": "Anshuman",
+        "phone": "9664185654",
+        "email": "9664185654@bachatbazar.com",
+        "house": "House No. 128, Phase 1",
+        "area": "Near Mansa Chowk, RTO Office Road",
+        "landmark": "Near Hanuman Mandir",
+        "city": "Bhiwadi",
+        "state": "Rajasthan",
+        "pincode": "301019"
+      },
+      "items": [
+        {
+          "id": "prod-2",
+          "name": "Fortune Sunlite Refined Sunflower Oil 1L",
+          "brand": "Fortune",
+          "category": "grocery",
+          "unit": "1 Litre Pouch",
+          "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 175,
+          "normalPrice": 145,
+          "memberPrice": 132,
+          "appliedPrice": 132,
+          "isMemberPrice": true,
+          "itemSavings": 13
+        },
+        {
+          "id": "prod-3",
+          "name": "India Gate Basmati Rice Feast Rozzana 5kg",
+          "brand": "India Gate",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 450,
+          "normalPrice": 389,
+          "memberPrice": 349,
+          "appliedPrice": 349,
+          "isMemberPrice": true,
+          "itemSavings": 40
+        },
+        {
+          "id": "prod-4",
+          "name": "Tata Sampann Unpolished Toor Dal 1kg",
+          "brand": "Tata Sampann",
+          "category": "grocery",
+          "unit": "1 kg",
+          "image": "https://images.unsplash.com/photo-1585994192700-4e782977d405?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 210,
+          "normalPrice": 179,
+          "memberPrice": 165,
+          "appliedPrice": 165,
+          "isMemberPrice": true,
+          "itemSavings": 14
+        },
+        {
+          "id": "prod-5",
+          "name": "Dhara Kachi Ghani Mustard Oil 1L",
+          "brand": "Dhara",
+          "category": "grocery",
+          "unit": "1 Litre Bottle",
+          "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 185,
+          "normalPrice": 155,
+          "memberPrice": 139,
+          "appliedPrice": 139,
+          "isMemberPrice": true,
+          "itemSavings": 16
+        },
+        {
+          "id": "prod-7",
+          "name": "Madhur Pure & Hygienic Sugar 5kg",
+          "brand": "Madhur",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1581441363689-1f3c3c414635?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 260,
+          "normalPrice": 235,
+          "memberPrice": 215,
+          "appliedPrice": 215,
+          "isMemberPrice": true,
+          "itemSavings": 20
+        },
+        {
+          "id": "prod-8",
+          "name": "Catch Super Garam Masala Powder 100g",
+          "brand": "Catch",
+          "category": "grocery",
+          "unit": "100 g",
+          "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 98,
+          "normalPrice": 85,
+          "memberPrice": 74,
+          "appliedPrice": 74,
+          "isMemberPrice": true,
+          "itemSavings": 11
+        },
+        {
+          "id": "prod-9",
+          "name": "Amul Butter Pasteurized 500g",
+          "brand": "Amul",
+          "category": "dairy-bakery",
+          "unit": "500 g",
+          "image": "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 285,
+          "normalPrice": 275,
+          "memberPrice": 255,
+          "appliedPrice": 255,
+          "isMemberPrice": true,
+          "itemSavings": 20
+        },
+        {
+          "id": "prod-12",
+          "name": "Harvest Gold 100% Atta Whole Wheat Bread 400g",
+          "brand": "Harvest Gold",
+          "category": "dairy-bakery",
+          "unit": "400 g",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 55,
+          "normalPrice": 50,
+          "memberPrice": 44,
+          "appliedPrice": 44,
+          "isMemberPrice": true,
+          "itemSavings": 6
+        }
+      ],
+      "mrpTotal": 1718,
+      "normalTotal": 1513,
+      "subtotal": 1373,
+      "deliveryCharge": 0,
+      "total": 1373,
+      "memberSavings": 140,
+      "totalSavingsFromMRP": 345,
+      "paymentMethod": "UPI",
+      "paymentStatus": "Paid (UPI Confirmed)",
+      "status": "Delivered",
+      "deliveryNotes": "",
+      "statusHistory": [
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T06:10:11.684Z"
+        },
+        {
+          "status": "Delivered",
+          "time": "2026-09-24T06:12:27.451Z"
+        }
+      ]
+    },
+    {
+      "id": "BB-ORD-93002",
+      "date": "2026-09-24T06:08:39.024Z",
+      "customer": {
+        "id": "user-1789997340169",
+        "name": "Anshuman ",
+        "phone": "9664185654",
+        "email": "9664185654@bachatbazar.com",
+        "isMember": true,
+        "memberId": "BB-MEM-5100"
+      },
+      "shippingAddress": {
+        "name": "Anshuman",
+        "phone": "9664185654",
+        "email": "9664185654@bachatbazar.com",
+        "house": "House No. 128, Phase 1",
+        "area": "Near Mansa Chowk, RTO Office Road",
+        "landmark": "Near Hanuman Mandir",
+        "city": "Bhiwadi",
+        "state": "Rajasthan",
+        "pincode": "301019"
+      },
+      "items": [
+        {
+          "id": "prod-1",
+          "name": "Aashirvaad Shudh Chakki Atta 5kg",
+          "brand": "Aashirvaad",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 280,
+          "normalPrice": 249,
+          "memberPrice": 229,
+          "appliedPrice": 229,
+          "isMemberPrice": true,
+          "itemSavings": 20
+        },
+        {
+          "id": "prod-2",
+          "name": "Fortune Sunlite Refined Sunflower Oil 1L",
+          "brand": "Fortune",
+          "category": "grocery",
+          "unit": "1 Litre Pouch",
+          "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 175,
+          "normalPrice": 145,
+          "memberPrice": 132,
+          "appliedPrice": 132,
+          "isMemberPrice": true,
+          "itemSavings": 13
+        },
+        {
+          "id": "prod-3",
+          "name": "India Gate Basmati Rice Feast Rozzana 5kg",
+          "brand": "India Gate",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 450,
+          "normalPrice": 389,
+          "memberPrice": 349,
+          "appliedPrice": 349,
+          "isMemberPrice": true,
+          "itemSavings": 40
+        },
+        {
+          "id": "prod-17",
+          "name": "Tata Tea Premium Desh Ki Chai 1kg",
+          "brand": "Tata Tea",
+          "category": "beverages",
+          "unit": "1 kg",
+          "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 520,
+          "normalPrice": 440,
+          "memberPrice": 395,
+          "appliedPrice": 395,
+          "isMemberPrice": true,
+          "itemSavings": 45
+        },
+        {
+          "id": "prod-20",
+          "name": "Surf Excel Easy Wash Detergent Powder 5kg",
+          "brand": "Surf Excel",
+          "category": "cleaning",
+          "unit": "5 kg Mega Saver",
+          "image": "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 750,
+          "normalPrice": 625,
+          "memberPrice": 560,
+          "appliedPrice": 560,
+          "isMemberPrice": true,
+          "itemSavings": 65
+        },
+        {
+          "id": "prod-24",
+          "name": "Dettol Original Bathing Soap (125g x 5)",
+          "brand": "Dettol",
+          "category": "personal-care",
+          "unit": "Pack of 5 x 125g",
+          "image": "https://images.unsplash.com/photo-1607006314358-9703de800ec2?w=600&auto=format&fit=crop&q=80",
+          "quantity": 3,
+          "mrp": 295,
+          "normalPrice": 250,
+          "memberPrice": 219,
+          "appliedPrice": 219,
+          "isMemberPrice": true,
+          "itemSavings": 93
+        }
+      ],
+      "mrpTotal": 3060,
+      "normalTotal": 2598,
+      "subtotal": 2322,
+      "deliveryCharge": 0,
+      "total": 2322,
+      "memberSavings": 276,
+      "totalSavingsFromMRP": 738,
+      "paymentMethod": "UPI",
+      "paymentStatus": "Paid (UPI Confirmed)",
+      "status": "Delivered",
+      "deliveryNotes": "",
+      "statusHistory": [
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T06:08:39.024Z"
+        },
+        {
+          "status": "Delivered",
+          "time": "2026-09-24T06:12:31.303Z"
+        }
+      ]
+    },
+    {
+      "id": "BB-ORD-60162",
+      "date": "2026-09-24T06:03:06.423Z",
+      "customer": {
+        "id": "user-1789997340169",
+        "name": "Anshuman ",
+        "phone": "9664185654",
+        "email": "9664185654@bachatbazar.com",
+        "isMember": true,
+        "memberId": "BB-MEM-5100"
+      },
+      "shippingAddress": {
+        "name": "Anshuman",
+        "phone": "9664185654",
+        "email": "9664185654@bachatbazar.com",
+        "house": "House No. 128, Phase 1",
+        "area": "Near Mansa Chowk, RTO Office Road",
+        "landmark": "Near Hanuman Mandir",
+        "city": "Bhiwadi",
+        "state": "Rajasthan",
+        "pincode": "301019"
+      },
+      "items": [
+        {
+          "id": "prod-4",
+          "name": "Tata Sampann Unpolished Toor Dal 1kg",
+          "brand": "Tata Sampann",
+          "category": "grocery",
+          "unit": "1 kg",
+          "image": "https://images.unsplash.com/photo-1585994192700-4e782977d405?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 210,
+          "normalPrice": 179,
+          "memberPrice": 165,
+          "appliedPrice": 165,
+          "isMemberPrice": true,
+          "itemSavings": 14
+        },
+        {
+          "id": "prod-3",
+          "name": "India Gate Basmati Rice Feast Rozzana 5kg",
+          "brand": "India Gate",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 450,
+          "normalPrice": 389,
+          "memberPrice": 349,
+          "appliedPrice": 349,
+          "isMemberPrice": true,
+          "itemSavings": 40
+        },
+        {
+          "id": "prod-2",
+          "name": "Fortune Sunlite Refined Sunflower Oil 1L",
+          "brand": "Fortune",
+          "category": "grocery",
+          "unit": "1 Litre Pouch",
+          "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 175,
+          "normalPrice": 145,
+          "memberPrice": 132,
+          "appliedPrice": 132,
+          "isMemberPrice": true,
+          "itemSavings": 13
+        },
+        {
+          "id": "prod-1",
+          "name": "Aashirvaad Shudh Chakki Atta 5kg",
+          "brand": "Aashirvaad",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 280,
+          "normalPrice": 249,
+          "memberPrice": 229,
+          "appliedPrice": 229,
+          "isMemberPrice": true,
+          "itemSavings": 20
+        },
+        {
+          "id": "prod-6",
+          "name": "Tata Salt Vacuum Evaporated Iodized 1kg",
+          "brand": "Tata",
+          "category": "grocery",
+          "unit": "1 kg",
+          "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 30,
+          "normalPrice": 28,
+          "memberPrice": 24,
+          "appliedPrice": 24,
+          "isMemberPrice": true,
+          "itemSavings": 4
+        },
+        {
+          "id": "prod-10",
+          "name": "Amul Taaza Homogenised Toned Milk 1L",
+          "brand": "Amul",
+          "category": "dairy-bakery",
+          "unit": "1 Litre Tetra",
+          "image": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 74,
+          "normalPrice": 72,
+          "memberPrice": 65,
+          "appliedPrice": 65,
+          "isMemberPrice": true,
+          "itemSavings": 7
+        },
+        {
+          "id": "prod-11",
+          "name": "Mother Dairy Fresh Paneer 200g",
+          "brand": "Mother Dairy",
+          "category": "dairy-bakery",
+          "unit": "200 g",
+          "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 95,
+          "normalPrice": 89,
+          "memberPrice": 79,
+          "appliedPrice": 79,
+          "isMemberPrice": true,
+          "itemSavings": 10
+        },
+        {
+          "id": "prod-12",
+          "name": "Harvest Gold 100% Atta Whole Wheat Bread 400g",
+          "brand": "Harvest Gold",
+          "category": "dairy-bakery",
+          "unit": "400 g",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80",
+          "quantity": 3,
+          "mrp": 55,
+          "normalPrice": 50,
+          "memberPrice": 44,
+          "appliedPrice": 44,
+          "isMemberPrice": true,
+          "itemSavings": 18
+        },
+        {
+          "id": "prod-13",
+          "name": "Haldiram's Nagpur Bhujia Sev 1kg",
+          "brand": "Haldiram's",
+          "category": "snacks-beverages",
+          "unit": "1 kg Mega Pack",
+          "image": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=600&auto=format&fit=crop&q=80",
+          "quantity": 3,
+          "mrp": 320,
+          "normalPrice": 285,
+          "memberPrice": 255,
+          "appliedPrice": 255,
+          "isMemberPrice": true,
+          "itemSavings": 90
+        }
+      ],
+      "mrpTotal": 2439,
+      "normalTotal": 2156,
+      "subtotal": 1940,
+      "deliveryCharge": 0,
+      "total": 1940,
+      "memberSavings": 216,
+      "totalSavingsFromMRP": 499,
+      "paymentMethod": "COD",
+      "paymentStatus": "Pending (Cash on Delivery)",
+      "status": "Delivered",
+      "deliveryNotes": "",
+      "statusHistory": [
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T06:03:06.424Z"
+        },
+        {
+          "status": "Delivered",
+          "time": "2026-09-24T06:12:40.391Z"
+        }
+      ]
+    },
+    {
+      "id": "BB-ORD-74217",
+      "date": "2026-09-24T05:43:50.786Z",
+      "customer": {
+        "id": "user-regular",
+        "name": "Suresh Sharma (Normal Demo)",
+        "phone": "9123456780",
+        "email": "suresh.normal@example.com",
+        "isMember": false,
+        "memberId": "BB-MEM-9668"
+      },
+      "shippingAddress": {
+        "name": "Suresh Sharma (Normal Demo)",
+        "phone": "9123456780",
+        "email": "suresh.normal@example.com",
+        "house": "House No. 128, Phase 1",
+        "area": "UIT Sector 3",
+        "landmark": "Near Hanuman Mandir",
+        "city": "Bhiwadi",
+        "state": "Rajasthan",
+        "pincode": "301019"
+      },
+      "items": [
+        {
+          "id": "prod-1",
+          "name": "Aashirvaad Shudh Chakki Atta 5kg",
+          "brand": "Aashirvaad",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 280,
+          "normalPrice": 249,
+          "memberPrice": 229,
+          "appliedPrice": 249,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-2",
+          "name": "Fortune Sunlite Refined Sunflower Oil 1L",
+          "brand": "Fortune",
+          "category": "grocery",
+          "unit": "1 Litre Pouch",
+          "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&auto=format&fit=crop&q=80",
+          "quantity": 3,
+          "mrp": 175,
+          "normalPrice": 145,
+          "memberPrice": 132,
+          "appliedPrice": 145,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-3",
+          "name": "India Gate Basmati Rice Feast Rozzana 5kg",
+          "brand": "India Gate",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 450,
+          "normalPrice": 389,
+          "memberPrice": 349,
+          "appliedPrice": 389,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-6",
+          "name": "Tata Salt Vacuum Evaporated Iodized 1kg",
+          "brand": "Tata",
+          "category": "grocery",
+          "unit": "1 kg",
+          "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 30,
+          "normalPrice": 28,
+          "memberPrice": 24,
+          "appliedPrice": 28,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-7",
+          "name": "Madhur Pure & Hygienic Sugar 5kg",
+          "brand": "Madhur",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1581441363689-1f3c3c414635?w=600&auto=format&fit=crop&q=80",
+          "quantity": 3,
+          "mrp": 260,
+          "normalPrice": 235,
+          "memberPrice": 215,
+          "appliedPrice": 235,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-8",
+          "name": "Catch Super Garam Masala Powder 100g",
+          "brand": "Catch",
+          "category": "grocery",
+          "unit": "100 g",
+          "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&auto=format&fit=crop&q=80",
+          "quantity": 3,
+          "mrp": 98,
+          "normalPrice": 85,
+          "memberPrice": 74,
+          "appliedPrice": 85,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        },
+        {
+          "id": "prod-13",
+          "name": "Haldiram's Nagpur Bhujia Sev 1kg",
+          "brand": "Haldiram's",
+          "category": "snacks-beverages",
+          "unit": "1 kg Mega Pack",
+          "image": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=600&auto=format&fit=crop&q=80",
+          "quantity": 3,
+          "mrp": 320,
+          "normalPrice": 285,
+          "memberPrice": 255,
+          "appliedPrice": 285,
+          "isMemberPrice": false,
+          "itemSavings": 0
+        }
+      ],
+      "mrpTotal": 3319,
+      "normalTotal": 2916,
+      "subtotal": 2916,
+      "deliveryCharge": 0,
+      "total": 2916,
+      "memberSavings": 0,
+      "totalSavingsFromMRP": 403,
+      "paymentMethod": "COD",
+      "paymentStatus": "Pending (Cash on Delivery)",
+      "status": "Delivered",
+      "deliveryNotes": "",
+      "statusHistory": [
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T05:43:50.786Z"
+        },
+        {
+          "status": "Delivered",
+          "time": "2026-09-24T06:12:50.808Z"
+        }
+      ]
+    },
+    {
+      "id": "BB-ORD-89280",
+      "date": "2026-09-24T05:37:17.952Z",
+      "customer": {
+        "id": "user-member",
+        "name": "Rajesh Kumar (Member Demo)",
+        "phone": "9876543210",
+        "email": "rajesh.member@example.com",
+        "isMember": true,
+        "memberId": "BB-MEM-8821"
+      },
+      "shippingAddress": {
+        "name": "Rajesh Kumar (Member Demo)",
+        "phone": "9876543210",
+        "email": "rajesh.member@example.com",
+        "house": "Flat 402, Tower B, Ashiana Town",
+        "area": "Thada Road",
+        "landmark": "Opposite Community Park",
+        "city": "Bhiwadi",
+        "state": "Rajasthan",
+        "pincode": "301019"
+      },
+      "items": [
+        {
+          "id": "prod-3",
+          "name": "India Gate Basmati Rice Feast Rozzana 5kg",
+          "brand": "India Gate",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 450,
+          "normalPrice": 389,
+          "memberPrice": 349,
+          "appliedPrice": 349,
+          "isMemberPrice": true,
+          "itemSavings": 40
+        },
+        {
+          "id": "prod-4",
+          "name": "Tata Sampann Unpolished Toor Dal 1kg",
+          "brand": "Tata Sampann",
+          "category": "grocery",
+          "unit": "1 kg",
+          "image": "https://images.unsplash.com/photo-1585994192700-4e782977d405?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 210,
+          "normalPrice": 179,
+          "memberPrice": 165,
+          "appliedPrice": 165,
+          "isMemberPrice": true,
+          "itemSavings": 14
+        },
+        {
+          "id": "prod-2",
+          "name": "Fortune Sunlite Refined Sunflower Oil 1L",
+          "brand": "Fortune",
+          "category": "grocery",
+          "unit": "1 Litre Pouch",
+          "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 175,
+          "normalPrice": 145,
+          "memberPrice": 132,
+          "appliedPrice": 132,
+          "isMemberPrice": true,
+          "itemSavings": 13
+        },
+        {
+          "id": "prod-1",
+          "name": "Aashirvaad Shudh Chakki Atta 5kg",
+          "brand": "Aashirvaad",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 280,
+          "normalPrice": 249,
+          "memberPrice": 229,
+          "appliedPrice": 229,
+          "isMemberPrice": true,
+          "itemSavings": 20
+        },
+        {
+          "id": "prod-1789996140393",
+          "name": "aata ",
+          "brand": "Bachat Bazar",
+          "category": "dairy-bakery",
+          "unit": "1 kg",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 100,
+          "normalPrice": 80,
+          "memberPrice": 64,
+          "appliedPrice": 64,
+          "isMemberPrice": true,
+          "itemSavings": 16
+        },
+        {
+          "id": "prod-5",
+          "name": "Dhara Kachi Ghani Mustard Oil 1L",
+          "brand": "Dhara",
+          "category": "grocery",
+          "unit": "1 Litre Bottle",
+          "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 185,
+          "normalPrice": 155,
+          "memberPrice": 139,
+          "appliedPrice": 139,
+          "isMemberPrice": true,
+          "itemSavings": 16
+        },
+        {
+          "id": "prod-6",
+          "name": "Tata Salt Vacuum Evaporated Iodized 1kg",
+          "brand": "Tata",
+          "category": "grocery",
+          "unit": "1 kg",
+          "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 30,
+          "normalPrice": 28,
+          "memberPrice": 24,
+          "appliedPrice": 24,
+          "isMemberPrice": true,
+          "itemSavings": 4
+        },
+        {
+          "id": "prod-7",
+          "name": "Madhur Pure & Hygienic Sugar 5kg",
+          "brand": "Madhur",
+          "category": "grocery",
+          "unit": "5 kg",
+          "image": "https://images.unsplash.com/photo-1581441363689-1f3c3c414635?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 260,
+          "normalPrice": 235,
+          "memberPrice": 215,
+          "appliedPrice": 215,
+          "isMemberPrice": true,
+          "itemSavings": 20
+        },
+        {
+          "id": "prod-8",
+          "name": "Catch Super Garam Masala Powder 100g",
+          "brand": "Catch",
+          "category": "grocery",
+          "unit": "100 g",
+          "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 98,
+          "normalPrice": 85,
+          "memberPrice": 74,
+          "appliedPrice": 74,
+          "isMemberPrice": true,
+          "itemSavings": 11
+        },
+        {
+          "id": "prod-9",
+          "name": "Amul Butter Pasteurized 500g",
+          "brand": "Amul",
+          "category": "dairy-bakery",
+          "unit": "500 g",
+          "image": "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?w=600&auto=format&fit=crop&q=80",
+          "quantity": 1,
+          "mrp": 285,
+          "normalPrice": 275,
+          "memberPrice": 255,
+          "appliedPrice": 255,
+          "isMemberPrice": true,
+          "itemSavings": 20
+        }
+      ],
+      "mrpTotal": 2073,
+      "normalTotal": 1820,
+      "subtotal": 1646,
+      "deliveryCharge": 0,
+      "total": 1646,
+      "memberSavings": 174,
+      "totalSavingsFromMRP": 427,
+      "paymentMethod": "COD",
+      "paymentStatus": "Pending (Cash on Delivery)",
+      "status": "Delivered",
+      "deliveryNotes": "",
+      "statusHistory": [
+        {
+          "status": "Confirmed",
+          "time": "2026-09-24T05:37:17.952Z"
+        },
+        {
+          "status": "Delivered",
+          "time": "2026-09-24T05:41:40.893Z"
+        }
+      ]
+    },
     {
       "id": "BB-ORD-46935",
       "date": "2026-09-21T14:46:00.643Z",
@@ -1173,14 +2546,34 @@
   ],
   "whatsappConsents": [
     {
+      "id": "wac-1790231063174",
+      "userId": "user-1790231063167",
+      "customerName": "Ramesh Sharma",
+      "phone": "9876500123",
+      "transactionalConsent": true,
+      "marketingConsent": false,
+      "consentSource": "Checkout Form",
+      "timestamp": "2026-09-24T06:24:23.174Z",
+      "ipAddress": "::1",
+      "status": "TRANSACTIONAL_ONLY",
+      "history": [
+        {
+          "action": "OPT_IN_TRANSACTIONAL",
+          "date": "2026-09-24T06:24:23.174Z",
+          "source": "Checkout Form",
+          "ipAddress": "::1"
+        }
+      ]
+    },
+    {
       "id": "wac-1789997340169",
       "userId": "user-1789997340169",
-      "customerName": "Anshuman ",
+      "customerName": "Anshuman",
       "phone": "9664185654",
       "transactionalConsent": true,
       "marketingConsent": false,
-      "consentSource": "Admin Portal Manual Override",
-      "timestamp": "2026-09-21T13:45:58.669Z",
+      "consentSource": "Checkout Form",
+      "timestamp": "2026-09-24T06:44:46.513Z",
       "ipAddress": "::1",
       "status": "TRANSACTIONAL_ONLY",
       "history": [
@@ -1195,18 +2588,48 @@
           "date": "2026-09-21T13:45:58.669Z",
           "source": "Admin Portal Manual Override",
           "ipAddress": "::1"
+        },
+        {
+          "action": "OPT_IN_BOTH",
+          "date": "2026-09-24T06:03:06.424Z",
+          "source": "Checkout Form",
+          "ipAddress": "::1"
+        },
+        {
+          "action": "OPT_IN_BOTH",
+          "date": "2026-09-24T06:08:39.024Z",
+          "source": "Checkout Form",
+          "ipAddress": "::1"
+        },
+        {
+          "action": "OPT_IN_BOTH",
+          "date": "2026-09-24T06:10:11.684Z",
+          "source": "Checkout Form",
+          "ipAddress": "::1"
+        },
+        {
+          "action": "OPT_IN_BOTH",
+          "date": "2026-09-24T06:15:42.381Z",
+          "source": "Checkout Form",
+          "ipAddress": "::1"
+        },
+        {
+          "action": "OPT_IN_TRANSACTIONAL",
+          "date": "2026-09-24T06:44:46.513Z",
+          "source": "Checkout Form",
+          "ipAddress": "::1"
         }
       ]
     },
     {
       "id": "wac-001",
       "userId": "user-member",
-      "customerName": "Rajesh Kumar",
+      "customerName": "Rajesh Kumar (Member Demo)",
       "phone": "9876543210",
       "transactionalConsent": true,
       "marketingConsent": false,
-      "consentSource": "Registration & Checkout",
-      "timestamp": "2026-09-20T14:06:52.983Z",
+      "consentSource": "Checkout Form",
+      "timestamp": "2026-09-24T05:37:17.953Z",
       "ipAddress": "192.168.1.10",
       "status": "TRANSACTIONAL_ONLY",
       "history": [
@@ -1233,20 +2656,26 @@
           "source": "Stop WhatsApp Page",
           "reason": "Testing opt-out",
           "ipAddress": "::1"
+        },
+        {
+          "action": "OPT_IN_TRANSACTIONAL",
+          "date": "2026-09-24T05:37:17.953Z",
+          "source": "Checkout Form",
+          "ipAddress": "::1"
         }
       ]
     },
     {
       "id": "wac-002",
       "userId": "user-regular",
-      "customerName": "Suresh Sharma",
+      "customerName": "Suresh Sharma (Normal Demo)",
       "phone": "9123456780",
       "transactionalConsent": true,
-      "marketingConsent": false,
+      "marketingConsent": true,
       "consentSource": "Checkout Form",
-      "timestamp": "2026-09-21T14:46:00.643Z",
+      "timestamp": "2026-09-24T05:43:50.786Z",
       "ipAddress": "192.168.1.15",
-      "status": "TRANSACTIONAL_ONLY",
+      "status": "ACTIVE",
       "history": [
         {
           "action": "OPT_IN_TRANSACTIONAL",
@@ -1274,6 +2703,12 @@
         {
           "action": "OPT_IN_TRANSACTIONAL",
           "date": "2026-09-21T14:46:00.643Z",
+          "source": "Checkout Form",
+          "ipAddress": "::1"
+        },
+        {
+          "action": "OPT_IN_BOTH",
+          "date": "2026-09-24T05:43:50.786Z",
           "source": "Checkout Form",
           "ipAddress": "::1"
         }
@@ -1501,7 +2936,7 @@
       "name": "1 Year VIP Plan",
       "duration": "1 Year",
       "durationMonths": 12,
-      "price": 999,
+      "price": 1222,
       "mrp": 1499,
       "badge": "Basic Savings",
       "description": "1 Saal tak 500+ grocery items par direct Member rate & VIP priority delivery.",
@@ -1512,7 +2947,8 @@
         "Dedicated Customer Support in Bhiwadi"
       ],
       "isPopular": false,
-      "isActive": true
+      "isActive": true,
+      "updatedAt": "2026-09-24T06:57:49.489Z"
     },
     {
       "id": "plan-2yr",
@@ -1565,8 +3001,9 @@
         "Free Priority Home Delivery Forever (above ₹499)",
         "VIP Dedicated Support & Exclusive Gifting on Festivals"
       ],
-      "isPopular": false,
-      "isActive": true
+      "isPopular": true,
+      "isActive": true,
+      "updatedAt": "2026-09-24T06:58:09.809Z"
     }
   ],
   "membershipRequests": [
