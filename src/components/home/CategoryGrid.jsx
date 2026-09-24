@@ -13,10 +13,12 @@ export default function CategoryGrid() {
 
   // Custom icon mapper for clean modern category icons
   const getCategoryIcon = (cat) => {
-    if (cat.icon) {
+    if (!cat) return <ShoppingBag className="w-6 h-6 text-[#D71920]" />;
+    if (typeof cat === 'object' && cat.icon) {
       return <span className="text-2xl">{cat.icon}</span>;
     }
-    switch (cat.id) {
+    const catId = typeof cat === 'string' ? cat : (cat.id || '');
+    switch (catId) {
       case 'grocery': return <ShoppingBag className="w-6 h-6 text-[#D71920]" />;
       case 'fruits-veg':
       case 'fruits-vegetables': return <Apple className="w-6 h-6 text-[#D71920]" />;
@@ -57,10 +59,10 @@ export default function CategoryGrid() {
 
         {/* 8 Categories Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4">
-          {categories.map((cat) => (
+          {(categories || []).map((cat) => (
             <button
-              key={cat.id}
-              onClick={() => handleSelect(cat.id)}
+              key={cat?.id || Math.random()}
+              onClick={() => handleSelect(cat?.id || 'all')}
               className="bg-white border border-neutral-200 hover:border-[#D71920] rounded-2xl p-4 text-center transition-all duration-200 group flex flex-col items-center justify-center gap-2.5 shadow-2xs hover:shadow-md hover:-translate-y-0.5"
             >
               {/* Category Icon */}
@@ -70,7 +72,7 @@ export default function CategoryGrid() {
 
               {/* Category Name */}
               <h3 className="font-bold text-xs text-[#111111] group-hover:text-[#D71920] transition line-clamp-1">
-                {cat.name}
+                {cat?.name || 'Category'}
               </h3>
             </button>
           ))}
