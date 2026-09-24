@@ -23,9 +23,19 @@ export function StoreProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [currentView, setCurrentView] = useState('home'); // 'home' | 'catalog' | 'deals' | 'membership' | 'store-info' | 'admin'
-  const [toast, setToast] = useState(null);
+  const [currentView, setCurrentView] = useState(() => {
+    try {
+      const path = typeof window !== 'undefined' ? window.location.pathname.toLowerCase() : '';
+      const hash = typeof window !== 'undefined' ? window.location.hash.toLowerCase() : '';
+      const search = typeof window !== 'undefined' ? window.location.search.toLowerCase() : '';
+      if (path.startsWith('/admin') || hash.startsWith('#admin') || search.includes('view=admin')) {
+        return 'admin';
+      }
+      return 'home';
+    } catch {
+      return 'home';
+    }
+  });
 
   const showToast = (message, type = 'info') => {
     setToast({ message, type, id: Date.now() });

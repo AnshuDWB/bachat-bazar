@@ -1504,8 +1504,12 @@ app.post('/api/admin/membership/user/:userId/toggle', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Bachat Bazar Server running on http://localhost:${PORT}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Bachat Bazar Server running on http://localhost:${PORT}`);
+  });
+}
+
+export default app;
 
 

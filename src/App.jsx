@@ -36,20 +36,25 @@ export default function App() {
   const { currentView, setCurrentView } = useStore();
   const { isAdmin } = useAuth();
 
-  // Listen to URL routing (e.g. /admin or #admin)
+  // Listen to URL routing (e.g. /admin, /admin/, #admin, ?view=admin)
   useEffect(() => {
     const handleUrlRouting = () => {
       const path = window.location.pathname.toLowerCase();
       const hash = window.location.hash.toLowerCase();
+      const search = window.location.search.toLowerCase();
 
-      if (path.startsWith('/admin') || hash.startsWith('#admin')) {
+      if (path.startsWith('/admin') || hash.startsWith('#admin') || search.includes('view=admin')) {
         setCurrentView('admin');
       }
     };
 
     handleUrlRouting();
     window.addEventListener('popstate', handleUrlRouting);
-    return () => window.removeEventListener('popstate', handleUrlRouting);
+    window.addEventListener('hashchange', handleUrlRouting);
+    return () => {
+      window.removeEventListener('popstate', handleUrlRouting);
+      window.removeEventListener('hashchange', handleUrlRouting);
+    };
   }, [setCurrentView]);
 
   const getLegalPolicyId = (view) => {
@@ -59,7 +64,14 @@ export default function App() {
   };
 
   // If currently in Admin view (URL /admin or www.bachatbazar.space/admin)
-  if (currentView === 'admin' || window.location.pathname.startsWith('/admin')) {
+  const isAdminRoute = currentView === 'admin' ||
+    (typeof window !== 'undefined' && (
+      window.location.pathname.toLowerCase().startsWith('/admin') ||
+      window.location.hash.toLowerCase().startsWith('#admin') ||
+      window.location.search.toLowerCase().includes('view=admin')
+    ));
+
+  if (isAdminRoute) {
     return (
       <div className="min-h-screen bg-[#F7F7F7] flex flex-col justify-between">
         {isAdmin ? <AdminPortal /> : <AdminLoginView />}
